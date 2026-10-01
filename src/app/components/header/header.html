@@ -1,1 +1,12 @@
-<p>header works!</p>
+<header class="flex justify-between items-center p-4 sticky top-0 bg-gray-300">
+    <h1 class="bg-red-600 p-1 rounded-xl px-2 text-white">TecnoMax</h1>
+    <nav>
+        <ul class="flex gap-5 bg-gray-200 p-2 rounded-2xl px-4">
+            @for (link of links; track $index) {
+            <li>
+                <a class="hover:underline" [href]="link.href">{{ link.label }}</a>
+            </li>
+            }
+        </ul>
+    </nav>
+</header>
